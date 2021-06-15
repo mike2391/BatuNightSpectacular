@@ -1,0 +1,1090 @@
+/* CSS Globals */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  width: 100%;
+}
+
+.margin-btn {
+  margin: 0 5px 0 10px;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.img-radius {
+  border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse_01 {
+  0% {
+    transform: scale(0.94);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.94);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 38ch;
+  }
+}
+
+/* Navbar */
+.navbar .navbar-shrink {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  background-color: #070a30;
+  padding: 10px 0;
+}
+.navbar {
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.nav-link {
+  text-transform: capitalize;
+}
+
+.custom-navbar {
+  background-color: #070a30;
+}
+
+/* LANDING PAGE */
+
+/* Jumbotron */
+
+.landing-jumbutron .jumbotron {
+  background-image: url(img/test-jumboooo.png);
+  background-size: cover;
+  height: 660px;
+  /* min-height: 100vh; */
+  width: 100%;
+  position: relative;
+}
+.landing-jumbutron .jumbotron .container {
+  position: relative;
+  z-index: 1;
+}
+
+.landing-jumbutron .jumbotron::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.1)
+  );
+  position: absolute;
+  bottom: 0;
+}
+
+.landing-jumbutron .jumbotron .display-4 {
+  color: #ffffff;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  font-size: 45px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  margin-top: 70px;
+}
+
+.landing-jumbutron .jumbotron .lead {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.landing-jumbutron .jumbotron .play-button {
+  animation: pulse_01 2s ease infinite;
+}
+.landing-jumbutron .p-sec-jumbo {
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Video Pop Up */
+
+.video-popup {
+  padding: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1999;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5 ease;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.video-popup-inner {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+}
+
+.video-popup .video-popup-close {
+  position: absolute;
+  right: 0;
+  top: -30px;
+  height: 30px;
+  width: 30px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.video-popup .iframe-box {
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.video-popup #player-1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.buttons {
+  color: #ffffff;
+  text-transform: capitalize;
+  border-radius: 10px;
+  background-color: #ee6f57;
+  border: none;
+}
+
+.long-buttons {
+  color: #ffffff;
+  text-transform: capitalize;
+  border-radius: 10px;
+  background-color: #ee6f57;
+  border: none;
+  height: 40px;
+  width: 185px;
+}
+.buttons-section {
+  margin-top: 25px;
+}
+
+/* BNS Rides Section */
+.bns-rides {
+  padding-bottom: 40px;
+}
+
+.bns-rides .cards {
+  margin: 10px 0;
+}
+
+.bns-rides p {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+/* BNS History */
+.bns-history {
+  text-align: center;
+  background-color: #070a30;
+  padding: 65px 0;
+}
+
+.bns-history h2 {
+  font-size: 45px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.bns-history p {
+  font-size: 21px;
+  color: #d8d8d8;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.bns-history .img {
+  text-align: center;
+}
+
+/* WHY BNS */
+
+.why-bns {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 65px 0;
+}
+
+.why-bns h2 {
+  font-size: 45px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 30px;
+  line-height: 1.5;
+}
+
+.why-bns p {
+  font-size: 20px;
+  color: #5b5b5b;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.why-bns a {
+  margin-bottom: 30px;
+}
+
+/* BNS Place */
+
+.bns-place {
+  text-align: center;
+  background-color: #070a30;
+  padding: 65px 0;
+}
+
+.bns-place h2 {
+  font-size: 45px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 30px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.bns-place p {
+  font-size: 20px;
+  color: #d8d8d8;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.bns-place a {
+  margin-bottom: 30px;
+}
+
+.trapz-container {
+  position: relative;
+}
+
+.trapz {
+  clip-path: polygon(9% 0, 100% 0, 100% 100%, 54% 100%);
+  position: absolute;
+  z-index: -1;
+}
+
+/* Contact Us Landing Page */
+.contact-us-section {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 65px 0;
+}
+
+.contact-us-section h2 {
+  font-size: 45px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 55px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.contact-us-section p {
+  font-size: 20px;
+  color: #5b5b5b;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.contact-us-section .img {
+  text-align: center;
+  margin-right: 45px;
+}
+
+/* Landing Page End */
+
+/* HISTORY PAGE */
+
+.history-page {
+  background-color: #ffffff;
+}
+
+.history-page img {
+  box-shadow: 22px -22px #ff9b88;
+}
+
+.history-page h2 {
+  color: #000000;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+}
+
+.history-page p {
+  margin-top: 30px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 2.2;
+  color: #5b5b5b;
+}
+
+.history-page .row {
+  margin-top: 100px;
+}
+
+.mar-text {
+  margin-left: 20px;
+}
+
+.mar-bot {
+  margin-bottom: 20px;
+}
+
+/* WHY BNS PAGE */
+
+.why-bns-page .row {
+  margin-top: 4.5rem;
+}
+
+.why-bns-page {
+  background-color: #ffffff;
+}
+
+.why-bns-page .why-img {
+  box-shadow: 15px 25px #070d59;
+  margin-bottom: 3rem;
+  margin-right: 10px;
+}
+
+.why-bns-page .why-fluid {
+  opacity: 0.9;
+}
+
+.why-bns-page h2 {
+  margin-top: 50px;
+  color: #000000;
+  margin-bottom: 3rem;
+}
+
+.why-bns-page h3 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.why-bns-page p {
+  font-size: 21px;
+  line-height: 2.2;
+  color: #5b5b5b;
+  margin-top: 20px;
+}
+
+.why-bns-page .why-fluid-img {
+  margin: 60px 0 30px;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.why-bns-page .mar-why {
+  margin-left: 15pxpx;
+}
+
+/* ABOUT US PAGE */
+
+.about-jumbo .jumbotron {
+  background-image: url(img/about-us-fix.png);
+  background-size: cover;
+  height: 640px;
+  /* position: relative; */
+}
+.about-jumbo h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 140px;
+}
+
+.about-jumbo p {
+  color: #c4c4c4;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.our-service {
+  padding: 25px 0 75px;
+}
+.our-service h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.our-service img {
+  width: 120px;
+  height: 100px;
+}
+
+.our-service h4 {
+  margin: 15px 0;
+}
+.our-vision {
+  background-color: #070a30;
+  opacity: 0.9;
+  padding: 85px 0 150px;
+}
+
+.our-vision h2 {
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.our-vision p {
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.our-team h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.out-team .container {
+  margin-top: 10%;
+}
+
+.our-team .card {
+  position: relative;
+  overflow: hidden;
+}
+
+.our-team .card:before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 220%;
+  background: #070a30;
+  opacity: 0.7;
+  top: -20%;
+  left: -100%;
+  z-index: 1;
+  transform: rotate(20deg);
+  transform-origin: center top 0;
+  transition: 0.8s;
+}
+
+.our-team .card:hover:before {
+  left: 10%;
+}
+
+.our-team .card img {
+  width: 100%;
+  height: auto;
+}
+
+.our-team .card-text {
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  top: -100%;
+  color: #ffffff;
+  left: 0;
+  z-index: 2;
+  transition: 1.1s;
+}
+
+.icon-team {
+  margin-top: 10px;
+}
+
+.icon-team a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+.icon-team a:hover {
+  color: #ee6f57;
+}
+
+.our-team .card:hover .card-text {
+  top: 80px;
+}
+
+.our-team .card h6 {
+  font-weight: 300;
+}
+
+.our-team .card h4 {
+  font-size: 22px;
+}
+
+/* BNS Rides Page */
+
+.rides {
+  /* margin-top: -33px; */
+  margin-top: 80px;
+  background: linear-gradient(180deg, #ff9b88 0%, #111443 100%);
+  padding: 40px 0 75px;
+}
+
+.rides-jumbotron .jumbotron {
+  background-image: url(img/Rides\ map.png);
+  background-size: cover;
+  height: 100vh;
+}
+
+.rides .box {
+  width: 270px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.slide-img {
+  height: 450px;
+  position: relative;
+}
+
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.rides .detail-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-family: calibri;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, #000000 80%);
+  text-align: center;
+}
+
+.rides .type {
+  display: flex;
+  flex-direction: column;
+}
+
+.rides .type a {
+  color: #ffffff;
+  margin: 5px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding-right: 8px;
+}
+
+.rides .price {
+  color: #333333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: poppins;
+  letter-spacing: 0.5px;
+}
+
+.rides .overlay {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.rides .para-text {
+  color: #ffffff;
+  margin: 0 25px;
+  line-height: 2;
+}
+
+.rides .buy-btn {
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #252525;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: calibri;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.rides a {
+  text-decoration: none;
+}
+
+.rides .buy-btn:hover {
+  color: #ffffff;
+  background-color: #f15fa3;
+  transition: all ease 0.3s;
+}
+
+.rides h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-left: 20px;
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+
+.overlay {
+  visibility: hidden;
+}
+
+.slide-img:hover .overlay {
+  visibility: visible;
+  animation-delay: fade 0.5s;
+}
+
+/* Contact US Page */
+.jack-ma {
+  padding-top: 50px;
+}
+
+.contact-jumbo .jumbotron {
+  background-image: url(img/contact-us-jumbotron.png);
+  background-size: cover;
+  height: 640px;
+  /* position: relative; */
+}
+.contact-jumbo h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-top: 140px;
+  margin-bottom: 30px;
+}
+
+.contact-jumbo p {
+  color: #c4c4c4;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.jack-ma h2 {
+  color: #555555;
+  font-size: 30px;
+  line-height: 1.8;
+}
+
+.jack-ma h6 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #717171;
+}
+
+/* Get In Touch */
+
+.get-in-touch {
+  margin-top: -180px;
+  color: #ffffff;
+  padding: 80px 0 80px 0;
+  background-color: rgba(255, 155, 136, 0.85);
+}
+
+.get-in-touch h2 {
+  margin-top: -10px;
+  font-weight: 400;
+  font-size: 38px;
+}
+
+.get-in-touch .long-buttons-get {
+  color: #ffffff;
+  text-transform: capitalize;
+  border-radius: 10px;
+  background-color: #ee6f57;
+  border: none;
+  height: 40px;
+  width: 135px;
+  margin-top: 30px;
+}
+
+.get-in-touch hr {
+  margin-top: -2px;
+  margin-bottom: 30px;
+  width: 255px;
+  border: 0;
+  height: 8px;
+  background-color: #070a30;
+  opacity: 0.55;
+}
+
+/* Contact */
+
+.contact {
+  color: #ffffff;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #3d4398 0%,
+    rgba(41, 47, 117, 0.81) 100%
+  );
+  padding: 60px 0 70px;
+}
+
+.contact h2 {
+  font-weight: 400;
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact h6 {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 3;
+  letter-spacing: 2px;
+}
+
+/* Binus Map */
+
+.binus-map {
+  margin: 110px 0 100px;
+}
+
+/* FAQ Page */
+
+.curve {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.curve .content {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.curve .content h2 {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.curve .content p {
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.curve:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 10, 48, 0.88);
+  border-radius: 0 0 0% 0%/0 0 100% 100%;
+}
+
+.question .accordion {
+  margin: 150px 0;
+}
+
+.question .accordion p {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.question .accordion .btn {
+  background-color: #ffffff;
+}
+
+.question .card-header {
+  background-color: #ffffff;
+}
+
+/* Back To Top */
+
+#topBtn {
+  position: fixed;
+  bottom: 85px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #0a0e46;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 120px;
+  background-color: rgba(5, 7, 32, 1);
+  height: 100vh;
+  text-align: center;
+}
+
+.footer .footer-title {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: -1px;
+}
+
+.footer a {
+  line-height: 2;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.margin-icon {
+  margin: 0 7px;
+  font-size: 18px;
+}
+
+.bot-footer {
+  margin-top: 190px;
+  background-color: rgba(5, 7, 32, 1);
+}
+
+.bot-footer h3 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.binus-footer {
+  font-weight: 1;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 20px;
+  letter-spacing: 3px;
+}
+
+hr.fancy-line {
+  margin-top: 100px;
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(215, 215, 215, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(215, 215, 215, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -ms-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(215, 215, 215, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(215, 215, 215, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: 0px -2px 4px rgba(136, 136, 136, 0.75);
+}
+
+/* .bot-footer hr{
+    color: #FFFFFF;
+} */
+
+/* Desktop Version */
+
+@media (min-width: 992px) {
+  /* Navbar */
+  .navbar-brand,
+  .nav-link {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+
+  .nav-link {
+    text-transform: capitalize;
+    margin-right: 30px;
+  }
+
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #ff9b88;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 6px;
+    margin-bottom: -9px;
+  }
+
+  /* Jumbotron */
+  .landing-jumbutron .jumbotron {
+    margin-top: -75px;
+    height: 720px;
+  }
+
+  .landing-jumbutron .jumbotron .display-4 {
+    font-size: 55px;
+    margin-top: 125px;
+  }
+
+  /* BNS History */
+
+  .bns-history {
+    text-align: left;
+  }
+
+  /* BNS History */
+  .why-bns {
+    text-align: right;
+  }
+
+  .bns-history h2 {
+    margin-top: 20px;
+  }
+  /* BNS Place */
+
+  .bns-place {
+    text-align: left;
+  }
+  /* Contact us landing page */
+
+  .contact-us-section {
+    text-align: left;
+  }
+
+  /* Landing Page End */
+
+  /* History Page */
+  .mar-bot {
+    text-align: right;
+  }
+
+  /* WHY BNS Page */
+  .why-bns-page .text-right-css {
+    text-align: right;
+  }
+
+  /* ABOUT US Page */
+  /* .about-jumbo .jumbotron{
+    margin-top: -75px;
+} */
+
+  /* Contact Us Page */
+
+  .contact {
+    margin-top: -600px;
+  }
+
+  .jack-ma h2 {
+    font-size: 38px;
+  }
+
+  /* FAQ Page */
+
+  .curve:before {
+    border-radius: 0 0 60% 60%/0 0 100% 100%;
+  }
+
+  /* Footer */
+
+  .footer {
+    height: 600px;
+  }
+
+  .binus-footer {
+    margin-top: 25px;
+  }
+
+  .hr .fancy-line {
+    margin-top: 150px;
+  }
+}
+
+@media (min-width: 550px) {
+  #topBtn {
+    right: 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .footer {
+    text-align: left;
+  }
+}
